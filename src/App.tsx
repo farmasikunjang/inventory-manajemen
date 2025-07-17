@@ -10,6 +10,7 @@ import { MasterBarang } from "./components/MasterBarang";
 import { Gudang } from "./components/Gudang";
 import { UnitLayanan } from "./components/UnitLayanan";
 import { Distribusi } from "./components/Distribusi";
+import { StokSaldo } from "./components/StokSaldo";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,7 +28,7 @@ const App = () => (
             <Route path="/warehouse" element={<Gudang />} />
             <Route path="/units" element={<UnitLayanan />} />
             <Route path="/distribution" element={<Distribusi />} />
-            <Route path="/stock" element={<div className="p-4">Stok & Saldo - Coming Soon</div>} />
+            <Route path="/stock" element={<StokSaldo />} />
             <Route path="/reports" element={<div className="p-4">Laporan LPLPO - Coming Soon</div>} />
             <Route path="/alerts" element={<div className="p-4">Alert Kadaluarsa - Coming Soon</div>} />
             <Route path="/users" element={<div className="p-4">Users - Coming Soon</div>} />
