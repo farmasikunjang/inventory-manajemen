@@ -11,6 +11,10 @@ import { Gudang } from "./components/Gudang";
 import { UnitLayanan } from "./components/UnitLayanan";
 import { Distribusi } from "./components/Distribusi";
 import { StokSaldo } from "./components/StokSaldo";
+import { LaporanLPLPO } from "./components/LaporanLPLPO";
+import { AlertKadaluarsa } from "./components/AlertKadaluarsa";
+import { Users } from "./components/Users";
+import { Settings } from "./components/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,10 +33,10 @@ const App = () => (
             <Route path="/units" element={<UnitLayanan />} />
             <Route path="/distribution" element={<Distribusi />} />
             <Route path="/stock" element={<StokSaldo />} />
-            <Route path="/reports" element={<div className="p-4">Laporan LPLPO - Coming Soon</div>} />
-            <Route path="/alerts" element={<div className="p-4">Alert Kadaluarsa - Coming Soon</div>} />
-            <Route path="/users" element={<div className="p-4">Users - Coming Soon</div>} />
-            <Route path="/settings" element={<div className="p-4">Settings - Coming Soon</div>} />
+            <Route path="/reports" element={<LaporanLPLPO />} />
+            <Route path="/alerts" element={<AlertKadaluarsa />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
