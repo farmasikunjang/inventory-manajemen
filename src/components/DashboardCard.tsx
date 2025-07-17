@@ -6,6 +6,7 @@ interface DashboardCardProps {
   title: string;
   value: string | number;
   description?: string;
+  subtitle?: string;
   icon: LucideIcon;
   trend?: {
     value: string;
@@ -18,6 +19,7 @@ export function DashboardCard({
   title, 
   value, 
   description, 
+  subtitle,
   icon: Icon, 
   trend,
   className = ""
@@ -32,8 +34,8 @@ export function DashboardCard({
       </CardHeader>
       <CardContent>
         <div className="text-2xl font-bold text-gray-900">{value}</div>
-        {description && (
-          <p className="text-xs text-gray-500 mt-1">{description}</p>
+        {(description || subtitle) && (
+          <p className="text-xs text-gray-500 mt-1">{description || subtitle}</p>
         )}
         {trend && (
           <div className={`text-xs mt-2 flex items-center ${
